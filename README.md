@@ -2,6 +2,9 @@
 
 A modern admin dashboard for managing a car showroom. The app provides a clean, multi-page interface for inventory, orders, users, and car specifications, with built-in dark mode and bilingual (LTR/RTL) support.
 
+**Live Demo
+https://car-showroom-admin-dashboard.netlify.app
+
 **Demo Login**
 - Email: `admin@gmail.com`
 - Password: `admin`
