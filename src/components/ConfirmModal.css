@@ -1,0 +1,41 @@
+.confirm-modal {
+    max-width: 400px;
+    text-align: center;
+    padding: var(--spacing-2xl);
+}
+
+.confirm-icon {
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+}
+
+.confirm-modal.danger .confirm-icon {
+    color: var(--color-danger);
+}
+
+.confirm-modal.info .confirm-icon {
+    color: var(--color-info);
+}
+
+.confirm-message {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-xl);
+    line-height: var(--line-height-normal);
+}
+
+.confirm-modal h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-primary);
+}
+
+.confirm-modal .form-actions {
+    margin-top: var(--spacing-lg);
+}
+
+.confirm-modal .btn-danger-thematic,
+.confirm-modal .btn-primary-thematic,
+.confirm-modal .btn-secondary-thematic {
+    padding: var(--spacing-md);
+}
