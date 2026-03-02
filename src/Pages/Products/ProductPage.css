@@ -1,0 +1,234 @@
+/* ========================================
+   PRODUCTS PAGE - CAR INVENTORY
+   ======================================== */
+
+/* === PAGE HEADER === */
+.header-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 2px solid var(--color-bg-tertiary);
+}
+
+.header-page h1 {
+    margin: 0;
+    color: var(--color-primary);
+}
+
+/* === BUTTONS === */
+.add-btn {
+    padding: var(--spacing-md) var(--spacing-xl);
+    background: linear-gradient(135deg, var(--color-success) 0%, var(--color-success-dark) 100%);
+    color: var(--color-text-inverse);
+    border-radius: var(--border-radius-lg);
+    cursor: pointer;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-base);
+    transition: all var(--transition-base);
+    border: none;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.add-btn:active {
+    transform: translateY(0);
+}
+
+.plus {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extrabold);
+}
+
+.ss {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+/* === SEARCH & FILTER BAR === */
+.filter-bar {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: var(--color-surface);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-bg-tertiary);
+}
+
+.filter-bar input,
+.filter-bar select,
+.filter-bar button {
+    height: 44px;
+    padding: 0 var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-bg-tertiary);
+    font-size: var(--font-size-sm);
+    font-family: var(--font-primary);
+    transition: all var(--transition-base);
+    color: var(--color-text-primary);
+}
+
+.filter-bar input {
+    flex: 1;
+    min-width: 260px;
+    background: var(--color-bg-primary);
+}
+
+.filter-bar input::placeholder {
+    color: var(--color-text-tertiary);
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.15);
+    background: var(--color-surface);
+}
+
+.filter-bar select {
+    background: var(--color-bg-primary);
+    cursor: pointer;
+}
+
+.filter-bar button {
+    background: var(--color-bg-secondary);
+    border-color: var(--color-bg-tertiary);
+    cursor: pointer;
+    font-weight: var(--font-weight-semibold);
+    padding: 0 var(--spacing-lg);
+    color: var(--color-text-primary);
+}
+
+.filter-bar button:hover {
+    background: var(--color-bg-tertiary);
+    border-color: var(--color-secondary);
+    color: var(--color-text-primary);
+}
+
+/* === TABLE === */
+.p-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--color-surface);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-bg-tertiary);
+}
+
+.p-table thead {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-text-inverse);
+}
+
+.p-table th {
+    padding: var(--spacing-lg) var(--spacing-md);
+    text-align: left;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+.p-table td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--color-bg-tertiary);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+}
+
+.p-table tbody tr {
+    transition: all var(--transition-fast);
+}
+
+.p-table tbody tr:hover {
+    background: var(--color-bg-primary);
+}
+
+.p-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* === STATUS BADGES === */
+.status-s {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--border-radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-g {
+    background-color: var(--color-success-light);
+    color: var(--color-success-dark);
+}
+
+.status-r {
+    background-color: var(--color-danger-light);
+    color: var(--color-danger-dark);
+}
+
+/* === LOW STOCK WARNING === */
+.low-stock-warning {
+    background-color: var(--color-warning-light) !important;
+    color: #1f2937 !important;
+    /* Force dark text for contrast against light warning bg */
+}
+
+/* Ensure child cells also inherit or use this color */
+.low-stock-warning td {
+    color: #1f2937 !important;
+}
+
+.stock-cell {
+    font-weight: var(--font-weight-bold);
+}
+
+.stock-low {
+    color: var(--color-warning-dark);
+}
+
+.stock-out {
+    color: var(--color-danger-dark);
+}
+
+/* Redundant modal styles removed - now in index.css */
+
+/* === IMAGE CELL === */
+.img-cell {
+    width: 80px;
+    height: 80px;
+    padding: var(--spacing-xs);
+}
+
+.image-product {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius-md);
+    border: 2px solid var(--color-bg-tertiary);
+    transition: all var(--transition-base);
+}
+
+.image-product:hover {
+    transform: scale(1.1);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+}

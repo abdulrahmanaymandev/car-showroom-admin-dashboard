@@ -1,0 +1,102 @@
+/* ========================================
+   HEADER - PREMIUM AUTOMOTIVE DESIGN
+   ======================================== */
+
+.header-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-xl);
+  transition: all var(--transition-base);
+  z-index: var(--z-fixed);
+  box-shadow: var(--shadow-lg);
+  border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.header-bar.shifted {
+  left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-width));
+}
+
+.menu-btn {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-2xl);
+  cursor: pointer;
+  color: var(--color-text-inverse);
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 45px;
+  height: 45px;
+}
+
+.menu-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--color-accent);
+  transform: scale(1.05);
+}
+
+.menu-btn:active {
+  transform: scale(0.95);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius-full);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-text-inverse);
+  transition: all var(--transition-base);
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: rotate(15deg) scale(1.1);
+}
+
+.user-info {
+  color: var(--color-text-inverse);
+  font-family: var(--font-display);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* RTL Support */
+
+[dir='rtl'] .header-bar.shifted {
+  left: 0;
+  right: var(--sidebar-width);
+}

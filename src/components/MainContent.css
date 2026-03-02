@@ -1,0 +1,28 @@
+/* ========================================
+   MAIN CONTENT - DASHBOARD LAYOUT
+   ======================================== */
+
+.main {
+    min-height: 100vh;
+    padding: calc(var(--header-height) + var(--spacing-xl)) var(--spacing-xl) var(--spacing-xl);
+    background: var(--color-bg-primary);
+    transition: margin-left var(--transition-base);
+}
+
+.main.shifted {
+    margin-left: var(--sidebar-width);
+}
+
+.main h1 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xl);
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-extrabold);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+}

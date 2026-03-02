@@ -1,0 +1,180 @@
+/* ========================================
+   ORDERS PAGE - ORDER MANAGEMENT
+   ======================================== */
+
+/* === MODAL OVERLAY === */
+
+/* === MODAL OVERLAY === */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal);
+  padding: var(--spacing-lg);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* === MODAL CARD === */
+.modal-card {
+  background: var(--color-surface);
+  width: min(920px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-2xl);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* === MODAL HEADER === */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--color-bg-tertiary);
+  padding-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.modal-header h2 {
+  color: var(--color-primary);
+  margin: 0;
+  font-size: var(--font-size-2xl);
+}
+
+.modal-close {
+  border: none;
+  background: var(--color-bg-secondary);
+  font-size: var(--font-size-2xl);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+  color: var(--color-text-secondary);
+}
+
+.modal-close:hover {
+  background: var(--color-danger);
+  color: var(--color-text-inverse);
+  transform: rotate(90deg);
+}
+
+/* === MODAL INFO === */
+.modal-info {
+  margin-top: var(--spacing-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background: var(--color-bg-primary);
+  border-radius: var(--border-radius-lg);
+}
+
+.label {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.value {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+}
+
+/* === ITEMS BOX === */
+.items-box {
+  border: 1px solid var(--color-bg-tertiary);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin-top: var(--spacing-lg);
+}
+
+.items-head,
+.items-row {
+  display: grid;
+  grid-template-columns: 2fr 0.6fr 0.8fr 0.8fr;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  align-items: center;
+}
+
+.items-head {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: var(--color-text-inverse);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.items-row {
+  border-top: 1px solid var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  background: var(--color-surface);
+  transition: all var(--transition-fast);
+}
+
+.items-row:hover {
+  background: var(--color-bg-primary);
+}
+
+.items-total {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  border-top: 2px solid var(--color-primary);
+  background: var(--color-bg-primary);
+  font-weight: var(--font-weight-extrabold);
+  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+}
+
+/* Standardized Modal Info Box */
+.modal-info {
+  margin-top: var(--spacing-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background: var(--color-bg-primary);
+  border-radius: var(--border-radius-lg);
+}
+
+/* Redundant modal-actions and modal-card classes removed - now using global form-card and form-actions */
